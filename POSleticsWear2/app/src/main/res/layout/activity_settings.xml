@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boxInsetLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".SettingsActivity">
+
+    <Spinner
+        android:id="@+id/spinner_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="59dp"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/button_getRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_users"
+        android:layout_marginTop="66dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="getRoute"
+        android:text="@string/getRoute" />
+
+</RelativeLayout>

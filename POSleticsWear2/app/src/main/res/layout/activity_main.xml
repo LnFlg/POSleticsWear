@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wearable_default_bg">
+
+    <Button
+        android:id="@+id/button_pos"
+        android:layout_width="209dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ic_play_circle_filled_black_24dp"
+        android:onClick="sendPOS"
+        android:rotation="-90"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Distance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="80dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

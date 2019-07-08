@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorDarkGray">#343638</color>
+    <color name="colorWhite">#FFFF</color>
+    <color name="colorBgEditTextLogin">#ea4163</color>
+    <color name="colorButton">#4286f4</color>
+    <color name="colorOrange">#ffcc00</color>
+    <color name="btn_confirm">@android:color/holo_green_dark</color>
+    <color name="btn_decline">@android:color/holo_red_dark</color>
+    <color name="wearable_default_bg">@color/dark_grey</color>
+    @color/dark_grey
+</resources>
