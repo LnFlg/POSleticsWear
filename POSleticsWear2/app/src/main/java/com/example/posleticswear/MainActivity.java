@@ -12,6 +12,7 @@ import android.hardware.SensorManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -291,11 +292,21 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                 //rekursivere Aufruf mit verkürtzer Liste
                 checkClosestPos(posList);
             }
-
-
-
         }
     }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if (event.getRepeatCount() == 0) {
+            if (keyCode == KeyEvent.KEYCODE_STEM_1) {
+                startActivity(new Intent (this, SettingsActivity.class));
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {

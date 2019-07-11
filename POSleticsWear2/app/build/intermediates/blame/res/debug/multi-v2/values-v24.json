@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Franziska Thiemann\\Documents\\Uni\\Sozio\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\a87ad76ffa1238f75d846baec610d719\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\c38cdbd0ad073def3538d5f4843040ba\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,17 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\f711a763dff4c42aef5239398d650f4d\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\ae3471f440e1ba35ec90cac956014681\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\88c96157b8d07c65bbc474ce8dee0f5e\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -47,6 +37,16 @@
                         "endLines": "20",
                         "endColumns": "12",
                         "endOffsets": "1481"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\4c8a1b1c1085de7ae4eee3af7e3708ee\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

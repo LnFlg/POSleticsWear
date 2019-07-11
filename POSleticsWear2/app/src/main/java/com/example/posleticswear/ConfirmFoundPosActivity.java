@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class ConfirmFoundPosActivity extends WearableActivity {
 
-    private Pos toConfirm;
+    private int idToConfirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class ConfirmFoundPosActivity extends WearableActivity {
         setContentView(R.layout.activity_confirm_found_pos);
 
         Intent intent = getIntent();
-        //TODO get Pos from Intent
+        idToConfirm=intent.getIntExtra("id",0);
 
 
         // Enables Always-on
@@ -24,11 +24,11 @@ public class ConfirmFoundPosActivity extends WearableActivity {
     }
 
     public void approvePos(View view){
-        NetworkSingleton.getInstance(this.getApplicationContext()).upvotePos(toConfirm.getId());
+        NetworkSingleton.getInstance(this.getApplicationContext()).upvotePos(idToConfirm);
         startActivity(new Intent(this, MainActivity.class));
     }
     public void disprovePos(View view){
-        NetworkSingleton.getInstance(this.getApplicationContext()).downvotePos(toConfirm.getId());
+        NetworkSingleton.getInstance(this.getApplicationContext()).downvotePos(idToConfirm);
         startActivity(new Intent(this, MainActivity.class));
     }
 }

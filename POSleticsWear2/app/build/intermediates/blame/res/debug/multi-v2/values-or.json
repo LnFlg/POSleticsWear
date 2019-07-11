@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Franziska Thiemann\\Documents\\Uni\\Sozio\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "outputFile": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\f711a763dff4c42aef5239398d650f4d\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\953a18b52fda62bbc405dcf0130604f6\\res\\values-or\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "198",
+                        "endOffsets": "445"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4044",
+                        "endColumns": "198",
+                        "endOffsets": "4238"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\4c8a1b1c1085de7ae4eee3af7e3708ee\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,41 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\ae3471f440e1ba35ec90cac956014681\\res\\values-or\\values-or.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,171",
-                        "endColumns": "115,117",
-                        "endOffsets": "166,284"
-                    },
-                    "to": {
-                        "startLines": "49,50",
-                        "startColumns": "4,4",
-                        "startOffsets": "5815,5931",
-                        "endColumns": "115,117",
-                        "endOffsets": "5926,6044"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\ec5f102f740deb4e70eee5ef9ddafa7f\\res\\values-or\\values-or.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5714",
-                        "endColumns": "100",
-                        "endOffsets": "5810"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\8bf3f04553096b7ee9922bbb866abc0f\\res\\values-or\\values.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\b8218e1c3f7e58b65e75d751ce51183f\\res\\values-or\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,20 +55,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\878feab969b3b06e0ed24c38843209de\\res\\values-or\\values.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\cb44c6af1ef95893b2d5d40380e75794\\res\\values-or\\values-or.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "198",
-                        "endOffsets": "445"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "37",
+                        "startLines": "48",
                         "startColumns": "4",
-                        "startOffsets": "4044",
-                        "endColumns": "198",
-                        "endOffsets": "4238"
+                        "startOffsets": "5714",
+                        "endColumns": "100",
+                        "endOffsets": "5810"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\88c96157b8d07c65bbc474ce8dee0f5e\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,171",
+                        "endColumns": "115,117",
+                        "endOffsets": "166,284"
+                    },
+                    "to": {
+                        "startLines": "49,50",
+                        "startColumns": "4,4",
+                        "startOffsets": "5815,5931",
+                        "endColumns": "115,117",
+                        "endOffsets": "5926,6044"
                     }
                 }
             ]

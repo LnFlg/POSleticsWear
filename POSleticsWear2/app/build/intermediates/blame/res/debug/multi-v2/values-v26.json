@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Franziska Thiemann\\Documents\\Uni\\Sozio\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Franziska Thiemann\\.gradle\\caches\\transforms-2\\files-2.1\\f711a763dff4c42aef5239398d650f4d\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\4c8a1b1c1085de7ae4eee3af7e3708ee\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
