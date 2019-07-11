@@ -1,265 +1,265 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:2:1-15:12
-MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6638ddd73e70d533a1340506041d62de\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\85ae509509d9377c6da7ad60dcee3c5f\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.wear:wear:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\88c96157b8d07c65bbc474ce8dee0f5e\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\52b48b793fed5240f6eadee8dc1e2c8e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8269d5fdf6e6f2b7c00a03231e890424\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3f96b9543029d71fe62aee32a87d8714\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4c8a1b1c1085de7ae4eee3af7e3708ee\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\035975acbc67f5e3a141b2cfa76421c0\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c38cdbd0ad073def3538d5f4843040ba\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\71fe88042f08f0950edaeb3e226d4ddc\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\45d4bfb733ee69ae8af5a5c1d0d459fb\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e29dd828b661615c4f06e96d498bab47\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9b6ce9dc1d27af74a420e409d79f968c\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\da2d9663be2e26315e259359af6126da\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\2f8f3bd212e5df554847b16834399643\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8db9fb6c3e3855dc25f52fe7437bc675\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\70870c8d0c5656f9489c551169156d38\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\1d045186e60354593a0e575662fe51b7\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\444dd11e72a7a64502914cce69b1f688\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4faa242e1227572fae86680c5f0ad659\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0e440c615bbd3f8b9d01cd2f98d08194\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b7660d53cb03a6430872042c1734be05\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a1a8deadf80d30a0079973bcdabf3a25\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\662175719bcfdd526291b10bfa04a2c8\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\20e4d53078028c900a1d8a239c4cfa1b\AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d4867807b67c7921613140fc252990a6\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\96d7b0d98a266705ce819ff361648e12\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d1e9656a60c2a0650228591ea00181a\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e4262066149da71b51dfdc7ba9bccab3\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\72f4c60cbd2f7a6648fdf75ea4995304\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\40a7b1e9f43e1796df53a45c94d72367\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6ff0988fc340159c87a833109b7074bb\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a66205ffcc0f4d80c462b52740576207\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\acf16789bc2e16f53f797c26f251fc28\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d17de31011e0105ed3f8418224e7e025\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\47f83f94b7adf537fc1e0c93a1e5c05e\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\5aa78f250e65bf6a606d673f89590fea\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dd652fe1d5985c8c0fb8e46d234f035\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ae3471f440e1ba35ec90cac956014681\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ddebd21698da5b95724269d93e00431e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\261ae8d2da30ff7be85df05d8e11cc3d\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\c9a6ab86bfe50d8a9ab79d9e10115196\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f711a763dff4c42aef5239398d650f4d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\faa12112118d880dc6eceba11c474783\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a87ad76ffa1238f75d846baec610d719\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\49db3d0356f2a0ea9e5fe451f90f898f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ea64138e57cdeb03f8c888a902d2223d\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\bfdcb839f4398d16c2367abedceeeeed\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\e1c6c0739f7b602d566d7b61a2396d6c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0b89408e6cca93d93770156c11fe752b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dce4b37e9a985d0f059b8c249fbaa42\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f02e878a6b595c8b545263d24ca1fd9c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\b8c17de5ed925c6f10e128c02f0d1083\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4e918c96be874e1b488161c9b1c1b889\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\919ddff71b22e6529f49e2486328d9f3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8fc9a8f8295352be075233b5b17b5c5c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8852b9e8d0a744cb711773876003763c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1193d80a63d32e1d72c827461a498b6a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\90210222fd9257ee13326587f00a2bc1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\16fa0d9829a8a300aa9ae48370ddcf66\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d90c513d356eef4107934689521c2000\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\443a046aa874f0ae4049f63054bed8d5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1821a3bb79dd809cb2e9ca223104c6de\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0c533b7c600406469893a83a6f0f9c6c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d1c236f1cbd6dc99af3986ccef88760d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0de9a49b94cf3f4e738e6e1710f2d6f0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\7176d199c73eed2e068bcc642f547323\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a5f4f9fb634203ee57a41d55564329de\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\984fc8af8d0608884f9e2827f859da3d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4f729120d5b6c96c6ee0ffcbc6f23f96\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\997327177797d97eab96de71c5be486a\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-59:12
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:5:5-68
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:5:5-68
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:5:22-65
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:5:22-65
 uses-feature#android.hardware.type.watch
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:7:5-64
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:7:5-64
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:7:19-61
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:7:19-61
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:9:22-76
 application
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:11:5-57:19
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:9:5-13:19
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:9:5-13:19
-MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8269d5fdf6e6f2b7c00a03231e890424\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8269d5fdf6e6f2b7c00a03231e890424\AndroidManifest.xml:7:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3f96b9543029d71fe62aee32a87d8714\AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3f96b9543029d71fe62aee32a87d8714\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\035975acbc67f5e3a141b2cfa76421c0\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\035975acbc67f5e3a141b2cfa76421c0\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\71fe88042f08f0950edaeb3e226d4ddc\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\71fe88042f08f0950edaeb3e226d4ddc\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\45d4bfb733ee69ae8af5a5c1d0d459fb\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\45d4bfb733ee69ae8af5a5c1d0d459fb\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\20e4d53078028c900a1d8a239c4cfa1b\AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\20e4d53078028c900a1d8a239c4cfa1b\AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:11:5-57:19
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\47f83f94b7adf537fc1e0c93a1e5c05e\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\47f83f94b7adf537fc1e0c93a1e5c05e\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\261ae8d2da30ff7be85df05d8e11cc3d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\261ae8d2da30ff7be85df05d8e11cc3d\AndroidManifest.xml:7:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\c9a6ab86bfe50d8a9ab79d9e10115196\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\c9a6ab86bfe50d8a9ab79d9e10115196\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\faa12112118d880dc6eceba11c474783\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\faa12112118d880dc6eceba11c474783\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\49db3d0356f2a0ea9e5fe451f90f898f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\49db3d0356f2a0ea9e5fe451f90f898f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ea64138e57cdeb03f8c888a902d2223d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ea64138e57cdeb03f8c888a902d2223d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d90c513d356eef4107934689521c2000\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d90c513d356eef4107934689521c2000\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:14:9-41
 	android:icon
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:16:9-59
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:16:9-59
 uses-library#com.google.android.wearable
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:17:9-19:39
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:10:9-12:40
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:10:9-12:40
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:17:9-19:39
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:10:9-12:40
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:10:9-12:40
 	android:required
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:18:13-55
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:18:13-55
 meta-data#com.google.android.wearable.standalone
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:25:9-27:36
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:25:9-27:36
 	android:value
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:27:13-33
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:27:13-33
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:26:13-66
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:26:13-66
 activity#com.example.posleticswear.SettingsActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:29:9-37:20
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:29:9-37:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:31:13-60
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:31:13-60
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:30:13-45
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:30:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:35:27-74
 activity#com.example.posleticswear.DiscoveryActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:38:9-55
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:38:9-55
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:38:19-52
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:38:19-52
 activity#com.example.posleticswear.ConfirmFoundPosActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:39:9-47:20
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:39:9-47:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:41:13-69
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:41:13-69
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:40:13-52
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:40:13-52
 activity#com.example.posleticswear.MainActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:48:9-56:20
+ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:48:9-56:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:50:13-45
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:50:13-45
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml:49:13-41
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:49:13-41
 uses-sdk
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:20:5-44
-MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6638ddd73e70d533a1340506041d62de\AndroidManifest.xml:20:5-44
-MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6638ddd73e70d533a1340506041d62de\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\85ae509509d9377c6da7ad60dcee3c5f\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\85ae509509d9377c6da7ad60dcee3c5f\AndroidManifest.xml:20:5-44
-MERGED from [androidx.wear:wear:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\88c96157b8d07c65bbc474ce8dee0f5e\AndroidManifest.xml:20:5-44
-MERGED from [androidx.wear:wear:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\88c96157b8d07c65bbc474ce8dee0f5e\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\52b48b793fed5240f6eadee8dc1e2c8e\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\52b48b793fed5240f6eadee8dc1e2c8e\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8269d5fdf6e6f2b7c00a03231e890424\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8269d5fdf6e6f2b7c00a03231e890424\AndroidManifest.xml:5:5-44
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3f96b9543029d71fe62aee32a87d8714\AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3f96b9543029d71fe62aee32a87d8714\AndroidManifest.xml:7:5-43
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4c8a1b1c1085de7ae4eee3af7e3708ee\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4c8a1b1c1085de7ae4eee3af7e3708ee\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\035975acbc67f5e3a141b2cfa76421c0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\035975acbc67f5e3a141b2cfa76421c0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.media:media:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c38cdbd0ad073def3538d5f4843040ba\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c38cdbd0ad073def3538d5f4843040ba\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\71fe88042f08f0950edaeb3e226d4ddc\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\71fe88042f08f0950edaeb3e226d4ddc\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\45d4bfb733ee69ae8af5a5c1d0d459fb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\45d4bfb733ee69ae8af5a5c1d0d459fb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e29dd828b661615c4f06e96d498bab47\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e29dd828b661615c4f06e96d498bab47\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9b6ce9dc1d27af74a420e409d79f968c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9b6ce9dc1d27af74a420e409d79f968c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\da2d9663be2e26315e259359af6126da\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\da2d9663be2e26315e259359af6126da\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\2f8f3bd212e5df554847b16834399643\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\2f8f3bd212e5df554847b16834399643\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8db9fb6c3e3855dc25f52fe7437bc675\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8db9fb6c3e3855dc25f52fe7437bc675\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\70870c8d0c5656f9489c551169156d38\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\70870c8d0c5656f9489c551169156d38\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\1d045186e60354593a0e575662fe51b7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\1d045186e60354593a0e575662fe51b7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\444dd11e72a7a64502914cce69b1f688\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\444dd11e72a7a64502914cce69b1f688\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4faa242e1227572fae86680c5f0ad659\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\4faa242e1227572fae86680c5f0ad659\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0e440c615bbd3f8b9d01cd2f98d08194\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0e440c615bbd3f8b9d01cd2f98d08194\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b7660d53cb03a6430872042c1734be05\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b7660d53cb03a6430872042c1734be05\AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a1a8deadf80d30a0079973bcdabf3a25\AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a1a8deadf80d30a0079973bcdabf3a25\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\662175719bcfdd526291b10bfa04a2c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\662175719bcfdd526291b10bfa04a2c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\20e4d53078028c900a1d8a239c4cfa1b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\20e4d53078028c900a1d8a239c4cfa1b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d4867807b67c7921613140fc252990a6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d4867807b67c7921613140fc252990a6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\96d7b0d98a266705ce819ff361648e12\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\96d7b0d98a266705ce819ff361648e12\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d1e9656a60c2a0650228591ea00181a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d1e9656a60c2a0650228591ea00181a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e4262066149da71b51dfdc7ba9bccab3\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e4262066149da71b51dfdc7ba9bccab3\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\72f4c60cbd2f7a6648fdf75ea4995304\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\72f4c60cbd2f7a6648fdf75ea4995304\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\40a7b1e9f43e1796df53a45c94d72367\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\40a7b1e9f43e1796df53a45c94d72367\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6ff0988fc340159c87a833109b7074bb\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6ff0988fc340159c87a833109b7074bb\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a66205ffcc0f4d80c462b52740576207\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a66205ffcc0f4d80c462b52740576207\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\acf16789bc2e16f53f797c26f251fc28\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\acf16789bc2e16f53f797c26f251fc28\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d17de31011e0105ed3f8418224e7e025\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d17de31011e0105ed3f8418224e7e025\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0da02d3429cc4e68040b760ee761842c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\47f83f94b7adf537fc1e0c93a1e5c05e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\47f83f94b7adf537fc1e0c93a1e5c05e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\5aa78f250e65bf6a606d673f89590fea\AndroidManifest.xml:20:5-44
+MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\5aa78f250e65bf6a606d673f89590fea\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dd652fe1d5985c8c0fb8e46d234f035\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dd652fe1d5985c8c0fb8e46d234f035\AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ae3471f440e1ba35ec90cac956014681\AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ae3471f440e1ba35ec90cac956014681\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ddebd21698da5b95724269d93e00431e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ddebd21698da5b95724269d93e00431e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\261ae8d2da30ff7be85df05d8e11cc3d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\261ae8d2da30ff7be85df05d8e11cc3d\AndroidManifest.xml:5:5-44
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\c9a6ab86bfe50d8a9ab79d9e10115196\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\c9a6ab86bfe50d8a9ab79d9e10115196\AndroidManifest.xml:7:5-43
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f711a763dff4c42aef5239398d650f4d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f711a763dff4c42aef5239398d650f4d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\faa12112118d880dc6eceba11c474783\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\faa12112118d880dc6eceba11c474783\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a87ad76ffa1238f75d846baec610d719\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a87ad76ffa1238f75d846baec610d719\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\49db3d0356f2a0ea9e5fe451f90f898f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\49db3d0356f2a0ea9e5fe451f90f898f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ea64138e57cdeb03f8c888a902d2223d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ea64138e57cdeb03f8c888a902d2223d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\bfdcb839f4398d16c2367abedceeeeed\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\bfdcb839f4398d16c2367abedceeeeed\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\e1c6c0739f7b602d566d7b61a2396d6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\e1c6c0739f7b602d566d7b61a2396d6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0b89408e6cca93d93770156c11fe752b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0b89408e6cca93d93770156c11fe752b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dce4b37e9a985d0f059b8c249fbaa42\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\2dce4b37e9a985d0f059b8c249fbaa42\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f02e878a6b595c8b545263d24ca1fd9c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\f02e878a6b595c8b545263d24ca1fd9c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\b8c17de5ed925c6f10e128c02f0d1083\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\b8c17de5ed925c6f10e128c02f0d1083\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4e918c96be874e1b488161c9b1c1b889\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4e918c96be874e1b488161c9b1c1b889\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\919ddff71b22e6529f49e2486328d9f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\919ddff71b22e6529f49e2486328d9f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8fc9a8f8295352be075233b5b17b5c5c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8fc9a8f8295352be075233b5b17b5c5c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8852b9e8d0a744cb711773876003763c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8852b9e8d0a744cb711773876003763c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1193d80a63d32e1d72c827461a498b6a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1193d80a63d32e1d72c827461a498b6a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\90210222fd9257ee13326587f00a2bc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\90210222fd9257ee13326587f00a2bc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\16fa0d9829a8a300aa9ae48370ddcf66\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\16fa0d9829a8a300aa9ae48370ddcf66\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\ec5f102f740deb4e70eee5ef9ddafa7f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d90c513d356eef4107934689521c2000\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d90c513d356eef4107934689521c2000\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\443a046aa874f0ae4049f63054bed8d5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\443a046aa874f0ae4049f63054bed8d5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1821a3bb79dd809cb2e9ca223104c6de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\1821a3bb79dd809cb2e9ca223104c6de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0c533b7c600406469893a83a6f0f9c6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0c533b7c600406469893a83a6f0f9c6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d1c236f1cbd6dc99af3986ccef88760d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\d1c236f1cbd6dc99af3986ccef88760d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0de9a49b94cf3f4e738e6e1710f2d6f0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\0de9a49b94cf3f4e738e6e1710f2d6f0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\7176d199c73eed2e068bcc642f547323\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\7176d199c73eed2e068bcc642f547323\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a5f4f9fb634203ee57a41d55564329de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\a5f4f9fb634203ee57a41d55564329de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\984fc8af8d0608884f9e2827f859da3d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\984fc8af8d0608884f9e2827f859da3d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4f729120d5b6c96c6ee0ffcbc6f23f96\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\4f729120d5b6c96c6ee0ffcbc6f23f96\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\997327177797d97eab96de71c5be486a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\997327177797d97eab96de71c5be486a\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Franziska Thiemann\Documents\Uni\Sozio\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\b8218e1c3f7e58b65e75d751ce51183f\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\8bf3f04553096b7ee9922bbb866abc0f\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\953a18b52fda62bbc405dcf0130604f6\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Franziska Thiemann\.gradle\caches\transforms-2\files-2.1\878feab969b3b06e0ed24c38843209de\AndroidManifest.xml:24:13-58

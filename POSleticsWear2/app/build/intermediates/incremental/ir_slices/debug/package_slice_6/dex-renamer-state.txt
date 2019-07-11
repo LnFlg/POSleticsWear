@@ -1,0 +1,4 @@
+#Tue Jul 09 12:38:54 CEST 2019
+base.0=C\:\\Users\\Franziska Thiemann\\Documents\\Uni\\Sozio\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+path.0=classes.dex
+renamed.0=classes.dex

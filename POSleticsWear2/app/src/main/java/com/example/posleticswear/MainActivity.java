@@ -3,6 +3,7 @@ package com.example.posleticswear;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.content.Intent;
 import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -16,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
+
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -43,6 +45,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     private Pos nextPosOnRoute;
     private TextView txt_distance;
     float currentDegree = 0f;
+
+    public static String nextPOS = "next_Pos";
 
 
     @Override
@@ -85,7 +89,14 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
             updateLastKnown();
             updateOrientationAngles();
-            checkClosestPos();
+
+            //Vorbereitung für CheckClosestPos
+            Map<Integer, Pos> notOnRouteList = RuntimeData.getInstance().getAllPos();
+            //exclude pos on route
+            for (Pos p : RuntimeData.getInstance().getRoute()){
+                notOnRouteList.remove(p.getId(), p);
+            }
+            checkClosestPos((Map<Integer, Pos>) notOnRouteList);
 
             if(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc())<=5.0){
                 updateNextPos();
@@ -245,28 +256,43 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         }
     }
 
-    private void checkClosestPos(){
+    private void checkClosestPos( Map<Integer,Pos> posList ){
         Location locSnapshot = lastKnownLoc;
-        Map<Integer, Pos> notOnRouteList = RuntimeData.getInstance().getAllPos();
-
-        //exclude pos on route
-        for (Pos p : RuntimeData.getInstance().getRoute()){
-            notOnRouteList.remove(p.getId(), p);
-        }
 
         //initialize random closest
-        double minDistance = locSnapshot.distanceTo((Location) notOnRouteList.values().toArray()[0]);
-        Location closest = new Location((Location) notOnRouteList.values().toArray()[0]);
+        double minDistance = locSnapshot.distanceTo((Location) posList.values().toArray()[0]);
+        Location closestLoc = new Location((Location) posList.values().toArray()[0]);
+        Pos closestPos = (Pos) posList. values().toArray()[0];
 
-        for(Map.Entry<Integer,Pos> entry : notOnRouteList.entrySet()){
+
+        for(Map.Entry<Integer,Pos> entry : posList.entrySet()){
             if(entry.getValue().getLoc().distanceTo(locSnapshot)<minDistance){
                 minDistance = entry.getValue().getLoc().distanceTo(locSnapshot);
-                closest = entry.getValue().getLoc();
+                closestLoc = entry.getValue().getLoc();
+                closestPos = (Pos) entry.getValue();
             }
         }
-        if(closest !=null && minDistance<RuntimeData.getInstance().getDiscoveryRadius()){
-            //TODO check if not confirmed
-            // TODO intent für discovery activity
+
+        if((closestPos != null) && ((minDistance - 1) < RuntimeData.getInstance().getDiscoveryRadius())){
+
+            if(closestPos.getUpvotes()<3) {
+
+                Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
+                //Daten einzeln dranhängen, da Pos Datentyp nicht möglich
+                intent.putExtra("lat", closestLoc.getLatitude());
+                intent.putExtra("long", closestLoc.getLongitude());
+                intent.putExtra("id", closestPos.getId());
+                intent.putExtra("upvotes",closestPos.getUpvotes());
+                intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
+                startActivity(intent);
+            }
+            else{
+                posList.remove(closestPos.getId(), closestPos);
+                //rekursivere Aufruf mit verkürtzer Liste
+                checkClosestPos(posList);
+            }
+
+
 
         }
     }
@@ -275,4 +301,5 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     public void onAccuracyChanged(Sensor sensor, int i) {
 
     }
+
 }

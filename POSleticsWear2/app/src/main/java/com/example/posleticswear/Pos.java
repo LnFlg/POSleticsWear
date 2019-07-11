@@ -11,17 +11,23 @@ public class Pos {
 
     Location loc= new Location("");
     private int id;
+    private int upvotes;
     private ArrayList<String> highestHashtags=null;
 
-    public Pos (double lat, double lng, int id){
+
+    //warum wird die highest hashtag List nicht mit im Konstruktor gesetzt ?
+    public Pos (double lat, double lng, int id, int upvotes){
         super();
         loc.setLatitude(lat);
         loc.setLongitude(lng);
         this.id=id;
+        this.upvotes =upvotes;
     }
     public Pos (Location l, int id){
         this.loc=l;
         this.id=id;
+
+        this.upvotes = 0;
     }
 
     public boolean equals(Pos pos) {
@@ -67,6 +73,14 @@ public class Pos {
     public void setLoc(Location loc) {
         this.loc = loc;
     }
+
+    public void setUpvotes(){
+        //aus Network Singelton ?
+    }
+    public int getUpvotes(){return upvotes;}
+
+
+
 
 
     public ArrayList<String> getHighestHashtags() {

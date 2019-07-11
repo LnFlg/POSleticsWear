@@ -47,6 +47,9 @@ public class NetworkSingleton {
         return instance;
     }
 
+    //JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET,
+          //  aUrl, null, new Response.Listener<JSONObject>(){
+
 
     public void getRouteFromServer(final int userId) {
 
@@ -54,6 +57,7 @@ public class NetworkSingleton {
         JsonArrayRequest jsnArrq = new JsonArrayRequest(
                 Request.Method.GET,
                 urlGetRoute.concat(String.valueOf(userId)),
+                null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -74,7 +78,7 @@ public class NetworkSingleton {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d(TAG, "Error: " + error.getMessage());
-                        hideProgressDialog();
+                       // hideProgressDialog();
                     }
                 });
 
@@ -85,7 +89,7 @@ public class NetworkSingleton {
 
 
     public void sendPOS(double lat, double lng, int userId) {
-        showProgressDialog();
+        //showProgressDialog();
 
         Map<String, String> postParam = new HashMap<String, String>();
         postParam.put("lat", String.valueOf(lat));
@@ -101,14 +105,14 @@ public class NetworkSingleton {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        hideProgressDialog();
+                        //hideProgressDialog();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d(TAG, "Error: " + error.getMessage());
-                        hideProgressDialog();
+                        //hideProgressDialog();
                     }
                 });
         getRequestQueue().add(jsonObjReq);
@@ -121,6 +125,7 @@ public class NetworkSingleton {
         JsonArrayRequest jsnArrq = new JsonArrayRequest(
                 Request.Method.GET,
                 urlPos,
+                null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -130,7 +135,8 @@ public class NetworkSingleton {
                                 double lat = response.getJSONObject(i).getDouble("lat");
                                 double lng = response.getJSONObject(i).getDouble("lng");
                                 int id = response.getJSONObject(i).getInt("id");
-                                Pos toAdd = new Pos(lat,lng,id);
+                                int upvote = response.getJSONObject(i).getInt("upvotes");
+                                Pos toAdd = new Pos(lat,lng,id,upvote);
 
                                 //2 höchsten Hashtags finden und speichern
                                 JSONArray hashtags = response.getJSONObject(i).getJSONArray("hashtags");
@@ -165,7 +171,7 @@ public class NetworkSingleton {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d(TAG, "Error: " + error.getMessage());
-                        hideProgressDialog();
+                        //hideProgressDialog();
                     }
                 });
         getRequestQueue().add(jsnArrq);
@@ -203,13 +209,11 @@ public class NetworkSingleton {
                 je.printStackTrace();
                 return null;
             }
-            if (decider) { result = jsonObject;}
+            if (decider)
+            { result = jsonObject;
+            }
         }
         return result;
     }
-
-
-
-
 
 }

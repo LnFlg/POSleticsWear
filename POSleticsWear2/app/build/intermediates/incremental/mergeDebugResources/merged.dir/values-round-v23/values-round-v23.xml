@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="users">
+        <item>User 1</item>
+        <item>User 2</item>
+        <item>User 3</item>
+        <item>User 4</item>
+        <item>User 5</item>
+        <item>User 6</item>
+        <item>User 7</item>
+        <item>User 8</item>
+        <item>User 9</item>
+        <item>User 10</item>
+        <item>User 11</item>
+        <item>User 12</item>
+        <item>User 13</item>
+        <item>User 14</item>
+    </string-array>
+    <bool name="action_choose_expand_selected">false</bool>
+    <bool name="action_choose_symmetrical_dimen">true</bool>
+    <dimen name="confirmation_overlay_image_size">72dp</dimen>
+    <dimen name="diag_button_padding_bottom">@dimen/screen_percentage_12</dimen>
+    <dimen name="diag_button_padding_horizontal">@dimen/screen_percentage_15</dimen>
+    <dimen name="diag_button_size">48dp</dimen>
+    <dimen name="diag_icon_margin_top">@dimen/screen_percentage_10</dimen>
+    <dimen name="diag_preferred_padding">@dimen/screen_percentage_15</dimen>
+    <item name="confirmation_overlay_margin_above_text" type="fraction">4.167%</item>
+    <item name="confirmation_overlay_margin_side" type="fraction">18.75%</item>
+    <string name="POS">POS</string>
+    <string name="confirmPOS">Confirm this POS?</string>
+    <string name="getRoute">Get Route</string>
+    <string name="hello_world">Hello Round World!</string>
+    <string name="no">NO</string>
+</resources>
