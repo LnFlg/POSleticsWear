@@ -197,11 +197,13 @@ public class NetworkSingleton {
 
                                 posMap.put(Integer.valueOf(id),toAdd);
 
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         }
                         RuntimeData.getInstance().setAllPos(posMap);
+                        Log.i("1","Amnt Pos fetched:"+posMap.size());
                     }
                 },
                 new Response.ErrorListener() {

@@ -2,9 +2,10 @@ package com.example.posleticswear;
 
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -23,15 +24,17 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
-import android.os.Vibrator;
-
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.Map;
 
@@ -39,6 +42,8 @@ import java.util.Map;
 public class MainActivity extends WearableActivity implements SensorEventListener {
 
 
+    private static final String REQUESTING_LOCATION_UPDATES_KEY = "2";
+    private static final int REQUESTING_LOCATION_UPDATES_KEY_INT = 2;
     private Button btn_pos;
     private SensorManager mSensorManager;
     private final float[] accelerometerReading = new float[3];
@@ -47,21 +52,24 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     private final float[] rotationMatrix = new float[9];
     private final float[] orientationAngles = new float[3];
 
-    private FusedLocationProviderClient fusedLocationClient;
+    private static FusedLocationProviderClient fusedLocationClient;
     private Location lastKnownLoc;
     private Pos nextPosOnRoute;
     private TextView txt_distance;
     float currentDegree = 0f;
 
-    public static String nextPOS = "next_Pos";
+    private static LocationRequest locationRequest;
+    private static LocationCallback locationCallback;
+    private static boolean requestingLocationUpdates;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        updateValuesFromBundle(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
-        //Log.i("1", this.getApplicationContext().getCurrentFocus().toString());
 
         //Für zeige auf nächsten pos
         txt_distance = (TextView) findViewById(R.id.textView_distance);
@@ -73,7 +81,40 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         //Für Locationdata
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        updateLastKnown();
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
+            return;
+        }
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+                            lastKnownLoc=location;
+                            return;
+                        }
+                        Log.w("2", "getLastLocation returned null");
+                    }
+                });
+
+
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                if (locationResult == null) {
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    lastKnownLoc=location;
+                }}};
+
+        locationRequest = LocationRequest.create();
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(5000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        startLocationUpdates();
+
         txt_distance.setText("No route");
 
         NetworkSingleton.getInstance(this.getApplicationContext()).getRouteFromServer(RuntimeData.getInstance().getUserId());
@@ -84,6 +125,31 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         // Enables Always-on
         setAmbientEnabled();
     }
+
+    private void startLocationUpdates() {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
+            Log.w("2","permissions for location not granted in start location updates, requesting...");
+            return;
+        }
+        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback,
+                null );
+        requestingLocationUpdates=true;
+    }
+
+    private void updateValuesFromBundle(Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            return;
+        }
+
+        // Update the value of requestingLocationUpdates from the Bundle.
+        if (savedInstanceState.keySet().contains(REQUESTING_LOCATION_UPDATES_KEY)) {
+            requestingLocationUpdates = savedInstanceState.getBoolean(REQUESTING_LOCATION_UPDATES_KEY);
+        }
+
+
+    }
+
 
     // Get readings from accelerometer and magnetometer.
     @Override
@@ -97,7 +163,6 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                         0, magnetometerReading.length);
             }
 
-            updateLastKnown();
             updateOrientationAngles();
 
             //Vorbereitung für CheckClosestPos
@@ -182,7 +247,26 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         // for the system's orientation sensor registered listeners
         mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
                 SensorManager.SENSOR_DELAY_GAME);
+
+        if (!requestingLocationUpdates) {
+            startLocationUpdates();
+        }
+
     }
+
+    private void stopLocationUpdates() {
+        if (fusedLocationClient != null && requestingLocationUpdates) {
+            try {
+                fusedLocationClient.removeLocationUpdates(locationCallback);
+                requestingLocationUpdates=false;
+            }
+            catch (SecurityException exp) {
+                Log.d("2", " Security exception while removeLocationUpdates");
+            }
+        }
+
+    }
+
 
     @Override
     protected void onPause() {
@@ -190,6 +274,14 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
         // to stop the listener and save battery
         mSensorManager.unregisterListener(this);
+        stopLocationUpdates();
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putBoolean(REQUESTING_LOCATION_UPDATES_KEY,
+                requestingLocationUpdates);
+        // ...
+        super.onSaveInstanceState(outState);
     }
 
 
@@ -197,7 +289,6 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
     public void sendPOS(View view){
         if (!RuntimeData.getInstance().isDisableLocationServices()) {
-            updateLastKnown();
             Location locTimestamp = lastKnownLoc;
             boolean newPos=true;
 
@@ -212,6 +303,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
             }
 
             if(newPos) {
+                if(lastKnownLoc==null){Log.w("2","Lastknownloc is null"); return;}
                 NetworkSingleton.getInstance(this.getApplicationContext()).sendPOS(
                         lastKnownLoc.getLatitude(),
                         lastKnownLoc.getLongitude(),
@@ -221,24 +313,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         }
     }
 
-    private void updateLastKnown() {
-        try {
-            fusedLocationClient.getLastLocation()
-                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                        @Override
-                        public void onSuccess(Location location) {
-                            // Got last known location. In some rare situations this can be null.
-                            if (location != null) {
-                                lastKnownLoc = location;
-                            }
-                        }
-                    });
-        } catch (SecurityException e) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    RuntimeData.LOCATION_PERMISSION_CODE);
-        }
-    }
+
 
 
 
@@ -246,17 +321,15 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case RuntimeData.LOCATION_PERMISSION_CODE: {
+            case REQUESTING_LOCATION_UPDATES_KEY_INT: {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, do the
-                    // location-related task
+                        startLocationUpdates();
+                        Log.i("2","Location permissions request accepted");
                     if (ContextCompat.checkSelfPermission(this,
                             Manifest.permission.ACCESS_FINE_LOCATION)
                             == PackageManager.PERMISSION_GRANTED) {
-                        updateLastKnown();
                     }
 
                 } else {RuntimeData.getInstance().setDisableLocationServices(true);}

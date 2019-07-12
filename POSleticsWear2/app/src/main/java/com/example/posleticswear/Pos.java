@@ -34,12 +34,12 @@ public class Pos {
         if(pos.getId()==this.id){return true;}else{return false;}
     }
     public boolean equals(Location l){
-        if(
-                Math.abs(l.getLatitude()-loc.getLatitude())<=15.0
-                && Math.abs(l.getLongitude()-loc.getLongitude())<=15.0)
-        {
-            return true;
-        }else {return false;}
+        try {
+            if(loc.distanceTo(l)<=15.0){return true;}else {return false;}
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public double getLat() {
@@ -74,9 +74,10 @@ public class Pos {
         this.loc = loc;
     }
 
-    public void setUpvotes(){
+    public void setUpvotes(int upvotes){
         //TODO
         //aus Network Singelton ?
+        this.upvotes=upvotes;
     }
     public int getUpvotes(){return upvotes;}
 
