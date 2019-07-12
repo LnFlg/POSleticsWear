@@ -3818,6 +3818,12 @@
         <item>User 12</item>
         <item>User 13</item>
         <item>User 14</item>
+        <item>User 15</item>
+        <item>User 16</item>
+        <item>User 17</item>
+        <item>User 18</item>
+        <item>User 19</item>
+        <item>User 20</item>
     </string-array></file><file path="C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\res\values-round\strings.xml" qualifiers="round-v23"><string name="POS">POS</string><string name="no">NO</string><string name="confirmPOS">Confirm this POS?</string><string name="hello_world">Hello Round World!</string><string name="getRoute">Get Route</string><string-array name="users">
         <item>User 1</item>
         <item>User 2</item>

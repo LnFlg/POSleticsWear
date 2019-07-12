@@ -12,7 +12,7 @@ public class Pos {
     Location loc= new Location("");
     private int id;
     private int upvotes;
-    private ArrayList<String> highestHashtags=null;
+    private ArrayList<String> highestHashtags= new ArrayList<>();
 
 
     //warum wird die highest hashtag List nicht mit im Konstruktor gesetzt ?

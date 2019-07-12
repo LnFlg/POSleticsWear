@@ -80,7 +80,6 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         setAmbientEnabled();
     }
 
-
     // Get readings from accelerometer and magnetometer.
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -156,7 +155,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
 
     private void updateNextPos(){
-        if(RuntimeData.getInstance().getRoute() != null && !RuntimeData.getInstance().isDisableLocationServices()){
+        if(!RuntimeData.getInstance().getRoute().isEmpty() && !RuntimeData.getInstance().isDisableLocationServices()){
             nextPosOnRoute= RuntimeData.getInstance().getRoute().remove(0);
         }else {
             RuntimeData.getInstance().setDiscoveryRadius(750d);

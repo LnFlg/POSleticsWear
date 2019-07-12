@@ -1,10 +1,13 @@
 package com.example.posleticswear;
 
+import android.app.Application;
 import android.location.Location;
+import android.widget.Adapter;
 
 import org.json.JSONArray;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class RuntimeData {
@@ -12,11 +15,12 @@ public class RuntimeData {
     public static final int LOCATION_PERMISSION_CODE = 1;
 
     private static RuntimeData instance;
-    private int userId = 0;
-    private ArrayList<Pos> route = null;
-    private Map<Integer, Pos> allPos;
+    private int userId=4;
+    private ArrayList<Pos> route = new ArrayList<>();
+    private Map<Integer, Pos> allPos = new HashMap<>();
     private double discoveryRadius=500.0;
     private boolean disableLocationServices = false;
+    private ArrayList<Integer> users= new ArrayList<>();
 
     private RuntimeData() {
         super();
@@ -30,7 +34,7 @@ public class RuntimeData {
     }
 
     public void addToRoute(int id){
-        this.route.add(new Pos(allPos.get(Integer.valueOf(id)).getLoc(),id));
+        this.route.add(allPos.get(id));
     }
 
     public int getUserId() {
@@ -57,6 +61,13 @@ public class RuntimeData {
 
     public void setDiscoveryRadius(double discoveryRadius) {
         this.discoveryRadius = discoveryRadius;
+    }
+    public ArrayList<Integer> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<Integer> users) {
+        this.users = users;
     }
 
     public boolean isDisableLocationServices() {

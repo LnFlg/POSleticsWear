@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:2:1-15:12
 MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.percentlayout:percentlayout:1.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\6638ddd73e70d533a1340506041d62de\AndroidManifest.xml:17:1-22:12
@@ -44,20 +44,20 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\PC\.gradle\cac
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a66205ffcc0f4d80c462b52740576207\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\acf16789bc2e16f53f797c26f251fc28\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d17de31011e0105ed3f8418224e7e025\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
 		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:2:11-69
@@ -77,8 +77,12 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:8:5-79
 	android:name
 		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:10:5-56:19
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:11:5-50:19
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:9:5-13:19
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:9:5-13:19
 MERGED from [com.google.android.gms:play-services-wearable:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\14fa9decec4fe71dac8dea83196f18ad\AndroidManifest.xml:22:5-20
@@ -104,61 +108,61 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\PC
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\cb44c6af1ef95893b2d5d40380e75794\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:14:9-41
 	android:icon
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:15:9-59
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:16:9-59
 uses-library#com.google.android.wearable
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:16:9-18:39
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:17:9-19:39
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:10:9-12:40
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a67edf5047f03e3d693233dc7115f0ae\AndroidManifest.xml:10:9-12:40
 	android:required
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:17:13-55
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:18:13-55
 meta-data#com.google.android.wearable.standalone
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:24:9-26:36
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:25:9-27:36
 	android:value
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:26:13-33
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:27:13-33
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:25:13-66
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:26:13-66
 activity#com.example.posleticswear.SettingsActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:28:9-36:20
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:29:9-34:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:30:13-60
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:31:13-60
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:29:13-45
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:31:13-35:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:32:17-69
-	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:32:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:34:17-77
-	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:30:13-45
 activity#com.example.posleticswear.DiscoveryActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:37:9-55
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:35:9-55
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:37:19-52
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:35:19-52
 activity#com.example.posleticswear.ConfirmFoundPosActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:38:9-46:20
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:36:9-39:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:40:13-69
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:39:13-52
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:37:13-52
 activity#com.example.posleticswear.MainActivity
-ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:47:9-55:20
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:40:9-49:20
 	android:label
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:49:13-45
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:42:13-45
 	android:name
-		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:48:13-41
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:41:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:43:13-47:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:46:17-77
+	android:name
+		ADDED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml:46:27-74
 uses-sdk
 INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\PC\AndroidStudioProjects\POSleticsWear\POSleticsWear2\app\src\main\AndroidManifest.xml

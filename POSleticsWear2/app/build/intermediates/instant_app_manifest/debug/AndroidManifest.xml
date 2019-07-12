@@ -15,6 +15,7 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@android:style/Theme.DeviceDefault" >
         <uses-library
             android:name="com.google.android.wearable"
@@ -39,21 +41,11 @@
         <activity
             android:name="com.example.posleticswear.SettingsActivity"
             android:label="@string/title_activity_settings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.example.posleticswear.DiscoveryActivity" />
         <activity
             android:name="com.example.posleticswear.ConfirmFoundPosActivity"
             android:label="@string/title_activity_confirm_found_pos" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.posleticswear.MainActivity"
