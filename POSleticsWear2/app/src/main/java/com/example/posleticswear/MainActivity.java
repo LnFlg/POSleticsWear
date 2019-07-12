@@ -2,6 +2,7 @@ package com.example.posleticswear;
 
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.Intent;
 import android.hardware.GeomagneticField;
@@ -10,7 +11,10 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.wearable.activity.WearableActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,6 +22,7 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
+import android.os.Vibrator;
 
 
 import androidx.core.app.ActivityCompat;
@@ -278,6 +283,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
             if(closestPos.getUpvotes()<3) {
 
+
                 Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
                 //Daten einzeln dranhängen, da Pos Datentyp nicht möglich
                 intent.putExtra("lat", closestLoc.getLatitude());
@@ -285,6 +291,18 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                 intent.putExtra("id", closestPos.getId());
                 intent.putExtra("upvotes",closestPos.getUpvotes());
                 intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
+
+
+                // Vibrate for 500 milliseconds
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                    try {
+                        v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                }
                 startActivity(intent);
             }
             else{
