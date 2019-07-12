@@ -75,6 +75,7 @@ public class Pos {
     }
 
     public void setUpvotes(){
+        //TODO
         //aus Network Singelton ?
     }
     public int getUpvotes(){return upvotes;}

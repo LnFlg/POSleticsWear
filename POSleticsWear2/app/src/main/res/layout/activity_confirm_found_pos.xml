@@ -43,6 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:background="@android:color/holo_green_light"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
             android:onClick="approvePos"
             android:text="@string/generic_yes" />
 
@@ -51,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:background="@android:color/holo_red_dark"
+            android:focusableInTouchMode="true"
             android:onClick="disprovePos"
             android:text="@string/no" />
     </LinearLayout>

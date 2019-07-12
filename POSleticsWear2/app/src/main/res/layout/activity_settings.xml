@@ -16,6 +16,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="59dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
         android:spinnerMode="dropdown" />
 
     <Button
@@ -25,6 +27,7 @@
         android:layout_below="@+id/spinner_users"
         android:layout_marginTop="66dp"
         android:background="@android:color/holo_green_light"
+        android:focusableInTouchMode="true"
         android:onClick="getRoute"
         android:text="@string/getRoute" />
 

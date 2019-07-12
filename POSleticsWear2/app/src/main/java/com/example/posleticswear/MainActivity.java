@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.wearable.activity.WearableActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
@@ -60,10 +61,14 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Log.i("1", this.getApplicationContext().getCurrentFocus().toString());
+
         //Für zeige auf nächsten pos
         txt_distance = (TextView) findViewById(R.id.textView_distance);
         btn_pos = (Button) findViewById(R.id.button_pos);
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+
+        btn_pos.requestFocus();
 
         //Für Locationdata
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
@@ -190,7 +195,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
 
 
-    private void sendPOS(View view){
+    public void sendPOS(View view){
         if (!RuntimeData.getInstance().isDisableLocationServices()) {
             updateLastKnown();
             Location locTimestamp = lastKnownLoc;
