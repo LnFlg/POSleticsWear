@@ -79,6 +79,11 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         btn_pos.requestFocus();
 
         //Für Locationdata
+        locationRequest = LocationRequest.create();
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(5000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -109,10 +114,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                     lastKnownLoc=location;
                 }}};
 
-        locationRequest = LocationRequest.create();
-        locationRequest.setInterval(10000);
-        locationRequest.setFastestInterval(5000);
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
         startLocationUpdates();
 
         txt_distance.setText("No route");

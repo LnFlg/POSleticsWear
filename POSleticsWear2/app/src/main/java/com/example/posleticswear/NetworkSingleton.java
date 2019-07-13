@@ -106,6 +106,7 @@ public class NetworkSingleton {
                             for(int i = 0; i < splited.length; i++) {
                                 RuntimeData.getInstance().addToRoute(Integer.parseInt(splited[i]));
                             }
+                            Log.i("2", "Got Route of length: " + splited.length);
                         }
 
                         if(RuntimeData.getInstance().getRoute()==null){
@@ -143,6 +144,7 @@ public class NetworkSingleton {
                     @Override
                     public void onResponse(JSONObject response) {
                         //hideProgressDialog();
+                        Log.i("2","POS sent to server.");
                     }
                 },
                 new Response.ErrorListener() {
@@ -238,6 +240,7 @@ public class NetworkSingleton {
                     @Override
                     public void onResponse(JSONObject response) {
                         //hideProgressDialog();
+                        Log.i("2","Upvoted pos");
                     }
                 },
                 new Response.ErrorListener() {
@@ -259,6 +262,7 @@ public class NetworkSingleton {
                     @Override
                     public void onResponse(JSONObject response) {
                         //hideProgressDialog();
+                        Log.i("2","Downvoted pos");
                     }
                 },
                 new Response.ErrorListener() {

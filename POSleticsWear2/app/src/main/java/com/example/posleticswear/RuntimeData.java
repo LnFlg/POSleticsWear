@@ -68,6 +68,7 @@ public class RuntimeData {
 
     public void setUsers(ArrayList<Integer> users) {
         this.users = users;
+        if(SettingsActivity.adapter != null) SettingsActivity.adapter.notifyDataSetChanged();
     }
 
     public boolean isDisableLocationServices() {

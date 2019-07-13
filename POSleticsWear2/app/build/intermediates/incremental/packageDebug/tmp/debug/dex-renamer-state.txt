@@ -1,4 +1,4 @@
-#Fri Jul 12 20:32:44 CEST 2019
+#Sat Jul 13 10:16:48 CEST 2019
 base.0=C\:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 path.1=classes.dex
 renamed.1=classes2.dex
