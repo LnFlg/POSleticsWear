@@ -1,5 +1,6 @@
 package com.example.posleticswear;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
@@ -11,9 +12,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class SettingsActivity extends WearableActivity implements AdapterView.OnItemSelectedListener {
-
-
-
     public static ArrayAdapter<Integer> adapter;
 
     @Override
@@ -58,19 +56,10 @@ public class SettingsActivity extends WearableActivity implements AdapterView.On
     public boolean onKeyDown(int keyCode, KeyEvent event){
         if (event.getRepeatCount() == 0) {
             if (keyCode == KeyEvent.KEYCODE_STEM_1) {
-                startActivity(new Intent(this, SettingsActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
             }
         }
         return super.onKeyDown(keyCode, event);
-    }
-
-
-    public ArrayAdapter<Integer> getAdapter() {
-        return adapter;
-    }
-
-    public void setAdapter(ArrayAdapter<Integer> adapter) {
-        this.adapter = adapter;
     }
 
 }
