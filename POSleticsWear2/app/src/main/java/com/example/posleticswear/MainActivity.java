@@ -36,6 +36,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -61,6 +62,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     private static LocationRequest locationRequest;
     private static LocationCallback locationCallback;
     private static boolean requestingLocationUpdates;
+    private Map<Integer, Pos> notOnRouteList;
 
 
     @Override
@@ -80,33 +82,18 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
         //Für Locationdata
         locationRequest = LocationRequest.create();
-        locationRequest.setInterval(10000);
-        locationRequest.setFastestInterval(5000);
+        locationRequest.setInterval(5000);
+        locationRequest.setFastestInterval(1000);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-
-        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
-            return;
-        }
-        fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-                            lastKnownLoc=location;
-                            return;
-                        }
-                        Log.w("2", "getLastLocation returned null");
-                    }
-                });
+        updateLocation();
 
 
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
+                Log.w("2", "onLocationResult");
                 if (locationResult == null) {
                     return;
                 }
@@ -121,11 +108,39 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
         NetworkSingleton.getInstance(this.getApplicationContext()).getRouteFromServer(RuntimeData.getInstance().getUserId());
 
-        updateNextPos();
 
+        //Vorbereitung für CheckClosestPos
+        notOnRouteList = RuntimeData.getInstance().getAllPos();
+        ArrayList<Pos> route = RuntimeData.getInstance().getRoute();
+        //exclude pos on route
+        for (Pos p : route){
+            notOnRouteList.remove(p.getId(), p);
+        }
+
+        updateNextPos();
 
         // Enables Always-on
         setAmbientEnabled();
+    }
+
+    private void updateLocation() {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
+            return;
+        }
+
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+                            lastKnownLoc=location;
+                            return;
+                        }
+                        Log.w("2", "getLastLocation returned null");
+                    }
+                });
     }
 
     private void startLocationUpdates() {
@@ -156,52 +171,29 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     // Get readings from accelerometer and magnetometer.
     @Override
     public void onSensorChanged(SensorEvent event) {
+        // `lastKnownLoc` kann noch null sein, wenn der Sensor ein onChange triggert, die Location
+        // der Uhr, aber noch nicht abgefragt wurde.
+        if(lastKnownLoc == null) {
+            return;
+        }
+
+        updateLocation();
+
         if (nextPosOnRoute!= null && !RuntimeData.getInstance().isDisableLocationServices()) {
-            if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-                System.arraycopy(event.values, 0, accelerometerReading,
-                        0, accelerometerReading.length);
-            } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-                System.arraycopy(event.values, 0, magnetometerReading,
-                        0, magnetometerReading.length);
-            }
-
-            updateOrientationAngles();
-
-            //Vorbereitung für CheckClosestPos
-            Map<Integer, Pos> notOnRouteList = RuntimeData.getInstance().getAllPos();
-            //exclude pos on route
-            for (Pos p : RuntimeData.getInstance().getRoute()){
-                notOnRouteList.remove(p.getId(), p);
-            }
             checkClosestPos((Map<Integer, Pos>) notOnRouteList);
 
             if(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc())<=5.0){
                 updateNextPos();
             }
 
-             //calc und set distanz, rotation
-            float[] distance = new float[1];
-            Location.distanceBetween(
-                    lastKnownLoc.getLatitude(),
-                    lastKnownLoc.getLongitude(),
-                    nextPosOnRoute.getLat(),
-                    nextPosOnRoute.getLng(),
-                    distance);
-            txt_distance.setText(distance[0] + "m");
-
+            txt_distance.setText(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc()) + "m");
 
             //Button drehen
-            float head = (float) Math.toDegrees(orientationAngles[0]);
+            float head = event.values[0];
             float bearTo = lastKnownLoc.bearingTo(nextPosOnRoute.getLoc());
 
             //bearTo = The angle from true north to the destination location from the point we're your currently standing.
             //head = The angle that you've rotated your phone from true north.
-
-            GeomagneticField geoField = new GeomagneticField(Double.valueOf(lastKnownLoc.getLatitude()).floatValue(), Double
-                    .valueOf(lastKnownLoc.getLongitude()).floatValue(),
-                    Double.valueOf(lastKnownLoc.getAltitude()).floatValue(),
-                    System.currentTimeMillis());
-            head -= geoField.getDeclination(); // converts magnetic north into true north
 
             if (bearTo < 0) {
                 bearTo = bearTo + 360;
@@ -215,11 +207,14 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                 direction = direction + 360;
             }
 
+
             RotateAnimation ra = new RotateAnimation(currentDegree, direction, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
             ra.setDuration(210);
             ra.setFillAfter(true);
 
             btn_pos.startAnimation(ra);
+
+            // btn_pos.setRotation(direction);
 
             currentDegree = direction;
         }
@@ -342,11 +337,17 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     }
 
     private void checkClosestPos( Map<Integer,Pos> posList ){
+        // `lastKnownLoc` kann noch null sein, wenn der Sensor ein onChange triggert, die Location
+        // der Uhr, aber noch nicht abgefragt wurde.
+        if(lastKnownLoc == null) {
+            return;
+        }
+
         Location locSnapshot = lastKnownLoc;
 
         //initialize random closest
-        double minDistance = locSnapshot.distanceTo((Location) posList.values().toArray()[0]);
-        Location closestLoc = new Location((Location) posList.values().toArray()[0]);
+        Location closestLoc = new Location(((Pos) posList.values().toArray()[0]).getLoc());
+        double minDistance = locSnapshot.distanceTo(closestLoc);
         Pos closestPos = (Pos) posList. values().toArray()[0];
 
 
@@ -367,6 +368,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
 
 
                 // Vibrate for 500 milliseconds
+
                 Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
@@ -384,6 +386,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                 intent.putExtra("upvotes",closestPos.getUpvotes());
                 intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
                 startActivity(intent);
+                // TODO: An der Stelle viebriert die Uhr ununterbrochen, vielleicht ein Bug?
+                // Log.w("checkClosestPos", "sstart DiscoveryActivity");
             }
             else{
                 posList.remove(closestPos.getId(), closestPos);

@@ -3,6 +3,7 @@ package com.example.posleticswear;
 import android.app.Application;
 import android.location.Location;
 import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 
 import org.json.JSONArray;
 
@@ -68,7 +69,12 @@ public class RuntimeData {
 
     public void setUsers(ArrayList<Integer> users) {
         this.users = users;
-        if(SettingsActivity.adapter != null) SettingsActivity.adapter.notifyDataSetChanged();
+        if(SettingsActivity.adapter != null) {
+            for(int user : users) {
+                SettingsActivity.adapter.add(user);
+            }
+        };
+        SettingsActivity.adapter.notifyDataSetChanged();
     }
 
     public boolean isDisableLocationServices() {

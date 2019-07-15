@@ -132,7 +132,7 @@ public class NetworkSingleton {
         Map<String, String> postParam = new HashMap<String, String>();
         postParam.put("lat", String.valueOf(lat));
         postParam.put("lng", String.valueOf(lng));
-        postParam.put("uID", String.valueOf(userId));
+        postParam.put("user_id", String.valueOf(userId));
 
 
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(
@@ -197,7 +197,7 @@ public class NetworkSingleton {
                                 toAdd.setHighestHashtags(hashtagNames);
 
 
-                                posMap.put(Integer.valueOf(id),toAdd);
+                                posMap.put(id,toAdd);
 
 
                             } catch (JSONException e) {
