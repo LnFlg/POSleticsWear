@@ -363,13 +363,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
             if(closestPos.getUpvotes()<3) {
 
 
-                Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
-                //Daten einzeln dranhängen, da Pos Datentyp nicht möglich
-                intent.putExtra("lat", closestLoc.getLatitude());
-                intent.putExtra("long", closestLoc.getLongitude());
-                intent.putExtra("id", closestPos.getId());
-                intent.putExtra("upvotes",closestPos.getUpvotes());
-                intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
+
 
 
                 // Vibrate for 500 milliseconds
@@ -382,6 +376,13 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                         e.printStackTrace();
                     }
                 }
+                Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
+                //Daten einzeln dranhängen, da Pos Datentyp nicht möglich
+                intent.putExtra("lat", closestLoc.getLatitude());
+                intent.putExtra("long", closestLoc.getLongitude());
+                intent.putExtra("id", closestPos.getId());
+                intent.putExtra("upvotes",closestPos.getUpvotes());
+                intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
                 startActivity(intent);
             }
             else{

@@ -67,11 +67,14 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
 
 
         TextView hashtag1= (TextView) findViewById(R.id.textView_Hashtag_1);
-        hashtag1.setText(pos.getHighestHashtags().get(0));
+        if (pos.getHighestHashtags().get(0) != null) {
+            hashtag1.setText(pos.getHighestHashtags().get(0));
+        }
 
         TextView hashtag2= (TextView) findViewById(R.id.textView_Hashtag_2);
-        hashtag1.setText(pos.getHighestHashtags().get(1));
-
+        if (pos.getHighestHashtags().get(0) != null) {
+            hashtag2.setText(pos.getHighestHashtags().get(1));
+        }
 
         //Distanzmarkeirung richtig setzen
         distanceTextView= (TextView) findViewById(R.id.textView_distance);
