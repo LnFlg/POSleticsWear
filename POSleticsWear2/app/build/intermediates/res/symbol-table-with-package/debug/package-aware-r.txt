@@ -26,7 +26,6 @@ anim open_on_phone_path_2_animation
 animator circular_image_button_anim
 array circular_progress_layout_color_scheme_colors
 array progress_spinner_sequence
-array users
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1049,6 +1048,7 @@ drawable ic_full_sad
 drawable ic_more_horiz_24dp_wht
 drawable ic_more_vert_24dp_wht
 drawable ic_navigation_black_24dp
+drawable ic_navigation_red_12dp
 drawable ic_play_circle_filled_black_24dp
 drawable notification_action_background
 drawable notification_bg
@@ -1197,7 +1197,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id imageView_NavArrow
+id imageView
 id info
 id invisible
 id italic
@@ -1405,6 +1405,7 @@ layout action_drawer_peek_view
 layout action_drawer_title_view
 layout activity_confirm_found_pos
 layout activity_discovery
+layout activity_discovery_picture
 layout activity_main
 layout activity_settings
 layout alert_dialog_wearable
@@ -1560,6 +1561,7 @@ string complicationDrawable_textTypeface
 string complicationDrawable_titleTypeface
 string confirmPOS
 string dismiss_overlay_button_label
+string distance
 string generic_cancel
 string generic_yes
 string getRoute
@@ -1572,6 +1574,7 @@ string time_difference_now
 string time_difference_short_days_and_hours
 string time_difference_short_hours_and_minutes
 string title_activity_confirm_found_pos
+string title_activity_discovery_picture
 string title_activity_settings
 string ws_action_drawer_content_description
 string ws_navigation_drawer_content_description

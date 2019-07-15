@@ -9,26 +9,26 @@
 
     <Button
         android:id="@+id/button_pos"
-        android:layout_width="153dp"
+        android:layout_width="match_parent"
         android:layout_height="155dp"
-        android:layout_marginEnd="28dp"
+        android:layout_margin="20dp"
         android:background="@drawable/ic_play_circle_filled_black_24dp"
         android:focusableInTouchMode="true"
         android:onClick="sendPOS"
         android:rotation="-90"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="32dp" />
 
     <TextView
         android:id="@+id/textView_distance"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:text="Distance"
+        android:textAlignment="center"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/button_pos"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button_pos"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

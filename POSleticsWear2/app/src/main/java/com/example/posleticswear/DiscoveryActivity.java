@@ -1,37 +1,34 @@
 package com.example.posleticswear;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.location.Location;
-import android.support.wearable.activity.WearableActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
+import android.support.wearable.activity.WearableActivity;
+import android.util.Log;
 import android.widget.TextView;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class DiscoveryActivity extends WearableActivity implements SensorEventListener {
 
 
-
+    private static final int REQUESTING_LOCATION_UPDATES_KEY_INT = 2;
     private SensorManager mSensorManager;
     private final float[] accelerometerReading = new float[3];
     private final float[] magnetometerReading = new float[3];
@@ -43,7 +40,10 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
     private Location lastKnownLoc;
     private TextView distanceTextView;
     private Pos pos;
+    private LocationRequest locationRequest;
     float currentDegree = 0f;
+    private LocationCallback locationCallback;
+    private boolean requestingLocationUpdates = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,28 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        //Für Locationdata
+        locationRequest = LocationRequest.create();
+        locationRequest.setInterval(5000);
+        locationRequest.setFastestInterval(1000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                Log.w("2", "onLocationResult");
+                if (locationResult == null) {
+                    Log.w("2", "onLocationResult was null");
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    lastKnownLoc=location;
+                }}};
+        updateLocation();
+        startLocationUpdates();
 
 
         // Intent zurück in Pos überführen
@@ -64,6 +86,7 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
         pos = new Pos(i.getExtras().getDouble("lat"),i.getExtras().getDouble("long"),
                 i.getExtras().getInt("id"),i.getExtras().getInt("upvotes") );
         pos.setHighestHashtags(hashtagList);
+
 
 
         TextView hashtag1= (TextView) findViewById(R.id.textView_Hashtag_1);
@@ -76,47 +99,60 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
             hashtag2.setText(pos.getHighestHashtags().get(1));
         }
 
+
         //Distanzmarkeirung richtig setzen
         distanceTextView= (TextView) findViewById(R.id.textView_distance);
-        distanceTextView.setText(pos.getLoc().distanceTo(lastKnownLoc)+"m");
+        distanceTextView.setText(getString(R.string.distance, lastKnownLoc.distanceTo(pos.getLoc())));
+    }
+
+    private void updateLocation() {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
+            return;
+        }
+    }
+
+    private void stopLocationUpdates() {
+        if (fusedLocationClient != null && requestingLocationUpdates) {
+            try {
+                fusedLocationClient.removeLocationUpdates(locationCallback);
+                requestingLocationUpdates=false;
+            }
+            catch (SecurityException exp) {
+                Log.d("2", " Security exception while removeLocationUpdates");
+            }
+        }
+
+    }
+
+    private void startLocationUpdates() {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, REQUESTING_LOCATION_UPDATES_KEY_INT);
+            Log.w("2","permissions for location not granted in start location updates, requesting...");
+            return;
+        }
+        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback,
+                null );
+        requestingLocationUpdates=true;
     }
 
     // Get readings from accelerometer and magnetometer.
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (!RuntimeData.getInstance().isDisableLocationServices()) {
-            if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-                System.arraycopy(event.values, 0, accelerometerReading,
-                        0, accelerometerReading.length);
-            } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-                System.arraycopy(event.values, 0, magnetometerReading,
-                        0, magnetometerReading.length);
-            }
 
-            updateLastKnown();
-            updateOrientationAngles();
-
-
-            if(lastKnownLoc.distanceTo(pos.getLoc())<=5.0){
+    /*        if(lastKnownLoc.distanceTo(pos.getLoc())<=5.0){
                 startActivity(new Intent(this, ConfirmFoundPosActivity.class).putExtra("id",pos.getId()));
             }
 
             //calc und set distanz, rotation
             distanceTextView.setText(lastKnownLoc.distanceTo(pos.getLoc()) + "m");
 
-
             //Button drehen
-            float head = (float) Math.toDegrees(orientationAngles[0]);
+            float head = (float) Math.toDegrees(event.values[0]);
             float bearTo = lastKnownLoc.bearingTo(pos.getLoc());
 
             //bearTo = The angle from true north to the destination location from the point we're your currently standing.
             //head = The angle that you've rotated your phone from true north.
-
-            GeomagneticField geoField = new GeomagneticField(Double.valueOf(lastKnownLoc.getLatitude()).floatValue(), Double
-                    .valueOf(lastKnownLoc.getLongitude()).floatValue(),
-                    Double.valueOf(lastKnownLoc.getAltitude()).floatValue(),
-                    System.currentTimeMillis());
-            head -= geoField.getDeclination(); // converts magnetic north into true north
 
             if (bearTo < 0) {
                 bearTo = bearTo + 360;
@@ -136,8 +172,8 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
 
             findViewById(R.id.imageView_NavArrow).startAnimation(ra);
 
-            currentDegree = direction;
-        }
+            currentDegree = direction;*/
+
     }
 
     @Override
@@ -157,8 +193,17 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
         super.onResume();
 
         // for the system's orientation sensor registered listeners
-        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
-                SensorManager.SENSOR_DELAY_GAME);
+        Sensor accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        if (accelerometer != null) {
+            mSensorManager.registerListener(this, accelerometer,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+        }
+        Sensor magneticField = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (magneticField != null) {
+            mSensorManager.registerListener(this, magneticField,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+        }
+        startLocationUpdates();
     }
 
     @Override
@@ -167,6 +212,7 @@ public class DiscoveryActivity extends WearableActivity implements SensorEventLi
 
         // to stop the listener and save battery
         mSensorManager.unregisterListener(this);
+        stopLocationUpdates();
     }
 
 

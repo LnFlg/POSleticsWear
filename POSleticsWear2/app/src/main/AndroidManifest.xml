@@ -3,8 +3,10 @@
     package="com.example.posleticswear">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-feature android:name="android.hardware.type.watch" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,6 +30,9 @@
             android:value="true" />
 
         <activity
+            android:name=".DiscoveryPictureActivity"
+            android:label="@string/title_activity_discovery_picture"></activity>
+        <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings">
             <intent-filter>
@@ -35,21 +40,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".DiscoveryActivity" />
-
+        <activity
+            android:name=".DiscoveryActivity"
+            android:label="DiscoveryActivity"></activity>
         <activity
             android:name=".ConfirmFoundPosActivity"
-            android:label="@string/title_activity_confirm_found_pos">
-        </activity>
+            android:label="@string/title_activity_confirm_found_pos"></activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-
-        </activity>
+            android:label="@string/app_name"></activity>
     </application>
 
 </manifest>

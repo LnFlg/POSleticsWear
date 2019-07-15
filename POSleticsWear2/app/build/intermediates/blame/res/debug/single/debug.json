@@ -1584,6 +1584,10 @@
         "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\4c8a1b1c1085de7ae4eee3af7e3708ee\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_navigation_red_12dp.xml.flat",
+        "source": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\src\\main\\res\\drawable\\ic_navigation_red_12dp.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\4c8a1b1c1085de7ae4eee3af7e3708ee\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -1610,6 +1614,10 @@
     {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_cc_clear.xml.flat",
         "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\a67edf5047f03e3d693233dc7115f0ae\\res\\drawable-v21\\ic_cc_clear.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_discovery_picture.xml.flat",
+        "source": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\src\\main\\res\\layout\\activity_discovery_picture.xml"
     },
     {
         "merged": "C:\\Users\\PC\\AndroidStudioProjects\\POSleticsWear\\POSleticsWear2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",

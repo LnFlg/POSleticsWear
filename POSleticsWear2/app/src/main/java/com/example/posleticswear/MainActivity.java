@@ -2,15 +2,12 @@ package com.example.posleticswear;
 
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,8 +17,6 @@ import android.support.wearable.activity.WearableActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -34,7 +29,6 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -46,12 +40,12 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     private static final String REQUESTING_LOCATION_UPDATES_KEY = "2";
     private static final int REQUESTING_LOCATION_UPDATES_KEY_INT = 2;
     private Button btn_pos;
-    private SensorManager mSensorManager;
+/*    private SensorManager mSensorManager;
     private final float[] accelerometerReading = new float[3];
     private final float[] magnetometerReading = new float[3];
 
     private final float[] rotationMatrix = new float[9];
-    private final float[] orientationAngles = new float[3];
+    private final float[] orientationAngles = new float[3];*/
 
     private static FusedLocationProviderClient fusedLocationClient;
     private Location lastKnownLoc;
@@ -76,7 +70,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         //Für zeige auf nächsten pos
         txt_distance = (TextView) findViewById(R.id.textView_distance);
         btn_pos = (Button) findViewById(R.id.button_pos);
-        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        // mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         btn_pos.requestFocus();
 
@@ -93,14 +87,78 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
-                Log.w("2", "onLocationResult");
+
                 if (locationResult == null) {
+                    Log.w("2", "onLocationResult was null");
                     return;
                 }
-                for (Location location : locationResult.getLocations()) {
-                    lastKnownLoc=location;
-                }}};
+                lastKnownLoc=locationResult.getLastLocation();
+                Log.w("2", "onLocationResult:" + lastKnownLoc.getLatitude() + ", " +lastKnownLoc.getLongitude());
 
+
+                // `lastKnownLoc` kann noch null sein, wenn der Sensor ein onChange triggert, die Location
+                // der Uhr, aber noch nicht abgefragt wurde.
+                if(lastKnownLoc == null) {
+                    return;
+                }
+
+                if (nextPosOnRoute!= null) {
+                    checkClosestPos((Map<Integer, Pos>) notOnRouteList);
+
+                    if(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc())<=5.0){
+                        updateNextPos();
+                    }
+
+                    txt_distance.setText(getString(R.string.distance, lastKnownLoc.distanceTo(nextPosOnRoute.getLoc())));
+
+/*                    //Button drehen
+
+                    float head = orientationAngles[0];
+                    // angle in degree [0 - 360] degree
+                    head =(float) ( ( Math.toDegrees(  head ) + 360 ) % 360);
+                    float bearTo = lastKnownLoc.bearingTo(nextPosOnRoute.getLoc());
+
+                    //bearTo = The angle from true north to the destination location from the point we're your currently standing.
+                    //head = The angle that you've rotated your phone from true north.
+
+                    if (bearTo < 0) {
+                        bearTo = bearTo + 360;
+                        //bearTo = -100 + 360  = 260;
+                    }
+
+                    float direction = bearTo - head;
+
+                    // If the direction is smaller than 0, add 360 to get the rotation clockwise.
+                    if (direction < 0) {
+                        direction = direction + 360;
+                    }
+
+
+                    Log.i("2", "current and direction: "+currentDegree+", "+direction);
+                    RotateAnimation ra = new RotateAnimation(currentDegree, direction);
+                    ra.setDuration(210);
+                    ra.setFillAfter(true);
+
+                    btn_pos.startAnimation(ra);
+
+                    // btn_pos.setRotation(direction);
+
+                    currentDegree = direction;*/
+                }else {updateNextPos();}
+            }};
+
+
+/*        // for the system's orientation sensor registered listeners
+        Sensor accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        if (accelerometer != null) {
+            mSensorManager.registerListener(this, accelerometer,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+        }
+        Sensor magneticField = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (magneticField != null) {
+            mSensorManager.registerListener(this, magneticField,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+        }*/
 
         startLocationUpdates();
 
@@ -113,8 +171,12 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         notOnRouteList = RuntimeData.getInstance().getAllPos();
         ArrayList<Pos> route = RuntimeData.getInstance().getRoute();
         //exclude pos on route
-        for (Pos p : route){
-            notOnRouteList.remove(p.getId(), p);
+        if (route!=null) {
+            for (Pos p : route){
+                if (p!=null) {
+                    notOnRouteList.remove(p.getId(), p);
+                }
+            }
         }
 
         updateNextPos();
@@ -163,76 +225,44 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         if (savedInstanceState.keySet().contains(REQUESTING_LOCATION_UPDATES_KEY)) {
             requestingLocationUpdates = savedInstanceState.getBoolean(REQUESTING_LOCATION_UPDATES_KEY);
         }
-
-
     }
+
+    // Compute the three orientation angles based on the most recent readings from
+    // the device's accelerometer and magnetometer.
+/*    public void updateOrientationAngles() {
+        // Update rotation matrix, which is needed to update orientation angles.
+        SensorManager.getRotationMatrix(rotationMatrix, null,
+                accelerometerReading, magnetometerReading);
+
+        // "mRotationMatrix" now has up-to-date information.
+
+        SensorManager.getOrientation(rotationMatrix, orientationAngles);
+
+        // "mOrientationAngles" now has up-to-date information.
+    }*/
 
 
     // Get readings from accelerometer and magnetometer.
     @Override
     public void onSensorChanged(SensorEvent event) {
-        // `lastKnownLoc` kann noch null sein, wenn der Sensor ein onChange triggert, die Location
-        // der Uhr, aber noch nicht abgefragt wurde.
-        if(lastKnownLoc == null) {
-            return;
+       /* if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            System.arraycopy(event.values, 0, accelerometerReading,
+                    0, accelerometerReading.length);
+        } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
+            System.arraycopy(event.values, 0, magnetometerReading,
+                    0, magnetometerReading.length);
         }
+        updateOrientationAngles();*/
 
-        updateLocation();
-
-        if (nextPosOnRoute!= null && !RuntimeData.getInstance().isDisableLocationServices()) {
-            checkClosestPos((Map<Integer, Pos>) notOnRouteList);
-
-            if(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc())<=5.0){
-                updateNextPos();
-            }
-
-            txt_distance.setText(lastKnownLoc.distanceTo(nextPosOnRoute.getLoc()) + "m");
-
-            //Button drehen
-            float head = event.values[0];
-            float bearTo = lastKnownLoc.bearingTo(nextPosOnRoute.getLoc());
-
-            //bearTo = The angle from true north to the destination location from the point we're your currently standing.
-            //head = The angle that you've rotated your phone from true north.
-
-            if (bearTo < 0) {
-                bearTo = bearTo + 360;
-                //bearTo = -100 + 360  = 260;
-            }
-
-            float direction = bearTo - head;
-
-            // If the direction is smaller than 0, add 360 to get the rotation clockwise.
-            if (direction < 0) {
-                direction = direction + 360;
-            }
-
-
-            RotateAnimation ra = new RotateAnimation(currentDegree, direction, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-            ra.setDuration(210);
-            ra.setFillAfter(true);
-
-            btn_pos.startAnimation(ra);
-
-            // btn_pos.setRotation(direction);
-
-            currentDegree = direction;
-        }
     }
 
 
     private void updateNextPos(){
-        if(!RuntimeData.getInstance().getRoute().isEmpty() && !RuntimeData.getInstance().isDisableLocationServices()){
+        if(!RuntimeData.getInstance().getRoute().isEmpty()){
             nextPosOnRoute= RuntimeData.getInstance().getRoute().remove(0);
         }else {
             RuntimeData.getInstance().setDiscoveryRadius(750d);
         }
-    }
-    private void updateOrientationAngles() {
-        // Update rotation matrix, which is needed to update orientation angles.
-        SensorManager.getRotationMatrix(rotationMatrix, null,
-                accelerometerReading, magnetometerReading);
-        SensorManager.getOrientation(rotationMatrix, orientationAngles);
     }
 
 
@@ -241,9 +271,17 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     protected void onResume() {
         super.onResume();
 
-        // for the system's orientation sensor registered listeners
-        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
-                SensorManager.SENSOR_DELAY_GAME);
+/*        // for the system's orientation sensor registered listeners
+        Sensor accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        if (accelerometer != null) {
+            mSensorManager.registerListener(this, accelerometer,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+        }
+        Sensor magneticField = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (magneticField != null) {
+            mSensorManager.registerListener(this, magneticField,
+                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);*/
+
 
         if (!requestingLocationUpdates) {
             startLocationUpdates();
@@ -270,7 +308,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         super.onPause();
 
         // to stop the listener and save battery
-        mSensorManager.unregisterListener(this);
+       // mSensorManager.unregisterListener(this);
         stopLocationUpdates();
     }
     @Override
@@ -293,7 +331,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
             for(Map.Entry<Integer, Pos> entry : RuntimeData.getInstance().getAllPos().entrySet()) {
 
                 //pos existiert schon (umkreis von 15 m ) -> finde id, upvote und verhindere neues erstellen
-                if(entry.getValue().equals(locTimestamp)){
+                if(entry.getValue().getLoc().distanceTo(locTimestamp)<= 15.){
                     newPos=false;
                     NetworkSingleton.getInstance(this.getApplicationContext()).upvotePos(entry.getValue().getId());
                 }
@@ -309,11 +347,6 @@ public class MainActivity extends WearableActivity implements SensorEventListene
             }
         }
     }
-
-
-
-
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -362,12 +395,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         if((closestPos != null) && ((minDistance - 1) < RuntimeData.getInstance().getDiscoveryRadius())){
 
             if(closestPos.getUpvotes()<3) {
-
-
-
-
-
-                // Vibrate for 500 milliseconds
+               // Vibrate for 500 milliseconds
 
                 Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -377,8 +405,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                     } catch (NullPointerException e) {
                         e.printStackTrace();
                     }
-                }
-                Intent intent = new Intent(MainActivity.this, DiscoveryActivity.class);
+
+                 Intent intent = new Intent(MainActivity.this, DiscoveryPictureActivity.class);
                 //Daten einzeln dranhängen, da Pos Datentyp nicht möglich
                 intent.putExtra("lat", closestLoc.getLatitude());
                 intent.putExtra("long", closestLoc.getLongitude());
@@ -386,13 +414,12 @@ public class MainActivity extends WearableActivity implements SensorEventListene
                 intent.putExtra("upvotes",closestPos.getUpvotes());
                 intent.putStringArrayListExtra("hashtagList", closestPos.getHighestHashtags());
                 startActivity(intent);
-                // TODO: An der Stelle viebriert die Uhr ununterbrochen, vielleicht ein Bug?
-                // Log.w("checkClosestPos", "sstart DiscoveryActivity");
-            }
-            else{
+
+                Log.w("checkClosestPos", "start DiscoveryActivity");
+            }else{
                 posList.remove(closestPos.getId(), closestPos);
                 //rekursivere Aufruf mit verkürtzer Liste
-                checkClosestPos(posList);
+                checkClosestPos(posList);}
             }
         }
     }

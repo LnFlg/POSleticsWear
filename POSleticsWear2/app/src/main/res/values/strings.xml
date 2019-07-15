@@ -1,32 +1,14 @@
 <resources>
     <string name="app_name">POSletics Wear</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_confirm_found_pos">activity_confirm_found_pos</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string-array name="users">
-        <item>User 1</item>
-        <item>User 2</item>
-        <item>User 3</item>
-        <item>User 4</item>
-        <item>User 5</item>
-        <item>User 6</item>
-        <item>User 7</item>
-        <item>User 8</item>
-        <item>User 9</item>
-        <item>User 10</item>
-        <item>User 11</item>
-        <item>User 12</item>
-        <item>User 13</item>
-        <item>User 14</item>
-        <item>User 15</item>
-        <item>User 16</item>
-        <item>User 17</item>
-        <item>User 18</item>
-        <item>User 19</item>
-        <item>User 20</item>
-    </string-array>
+    <string name="POS">POS</string>
+    <string name="no">NO</string>
+    <string name="confirmPOS">Confirm this POS?</string>
+    <string name="getRoute">Get Route</string>
+    <string name="distance">%1$f m</string>
+    <string name="title_activity_discovery_picture">DiscoveryPicture</string>
+    <string name="tag_placeholder">HashtagPlaceholder</string>
+    <string name="hashtag">#%1$s</string>
+
 </resources>
